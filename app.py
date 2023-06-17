@@ -25,7 +25,8 @@ def main() -> None:
                         choices=['us', 'eu', 'kr', 'tw'], default='us',
                     type=str)
     parser.add_argument('-l','--locale',
-                        help='Region to retrieve data from. Default to us.',
+                        help=('Locale for the specified region. '
+                              'Default to en_US.'),
                         choices=[
                             'en_US', 'es_MX', 'pt_BR', 'en_GB',
                             'es_ES', 'fr_FR', 'ru_RU', 'de_DE',
