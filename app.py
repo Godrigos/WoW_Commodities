@@ -14,7 +14,7 @@ def main() -> None:
     )
     parser.add_argument('id', help=('Client ID from Blizzarp API Access.'),
                     type=str)
-    parser.add_argument('secret', help=('Client Secret from Blizzarp '
+    parser.add_argument('secret', help=('Client Secret from Blizzard '
                                         'API Access.'),
                     type=str)
     parser.add_argument('path', help=('Path of file to save the data in '

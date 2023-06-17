@@ -110,3 +110,5 @@ You can even produce prety cool graphics with such data.
 ## License
 
 **Wow Commodities** is distributed under the terms of the [LGPL 3.0](https://www.gnu.org/licenses/lgpl-3.0-standalone.html) license.
+
+This application comes with no warrant of any kind. Use at your own risk.
