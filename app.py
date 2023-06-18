@@ -23,16 +23,16 @@ def main() -> None:
                     type=str)
     parser.add_argument('-r','--region',
                         help='Region to retrieve data from. Default to us.',
-                        choices=['us', 'eu', 'kr', 'tw'], default='us',
-                    type=str)
+                        choices=['us', 'eu', 'kr', 'tw', 'cn'],
+                        default='us', type=str)
     parser.add_argument('-l','--locale',
                         help=('Locale for the specified region. '
                               'Default to en_US.'),
                         choices=[
                             'en_US', 'es_MX', 'pt_BR', 'en_GB',
                             'es_ES', 'fr_FR', 'ru_RU', 'de_DE',
-                            'pt_PT', 'it_IT', 'ko_KR', 'zh_TW'
-                            ],
+                            'pt_PT', 'it_IT', 'ko_KR', 'zh_TW',
+                            'zh_CN'],
                         default='en_US',
                     type=str)
     args = parser.parse_args()
@@ -41,9 +41,9 @@ def main() -> None:
         exit(f'Region {args.region} does not accept {args.locale} locale. '
              f'Please choose between {region_locale[args.region]}.')
 
-    URL: str = f'https://{args.region}.api.blizzard.com/data/wow/'
+    URL: str = 'https://gateway.battlenet.com.cn/data/wow/' if args.region == 'cn' else f'https://{args.region}.api.blizzard.com/data/wow/'
     LOCALE: str = f'{args.locale}'
-    TOKEN: str = get_token(args.id, args.secret)
+    TOKEN: str = get_token(args.id, args.secret, args.region)
 
     if os.path.splitext(args.path)[1] != 'xz':
         args.path += ".xz"
