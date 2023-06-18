@@ -38,7 +38,8 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.locale not in region_locale[args.region]:
-        exit(f'Region {args.region} does not accept {args.locale} locale.')
+        exit(f'Region {args.region} does not accept {args.locale} locale. '
+             f'Please choose between {region_locale[args.region]}.')
 
     URL: str = f'https://{args.region}.api.blizzard.com/data/wow/'
     LOCALE: str = f'{args.locale}'
