@@ -3,6 +3,7 @@ import argparse
 import os
 from src.get_commodities import get_commodities
 from src.get_token import get_token
+from src.region_locale import region_locale
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -35,6 +36,9 @@ def main() -> None:
                         default='en_US',
                     type=str)
     args = parser.parse_args()
+
+    if args.locale not in region_locale[args.region]:
+        exit(f'Region {args.region} does not accept {args.locale} locale.')
 
     URL: str = f'https://{args.region}.api.blizzard.com/data/wow/'
     LOCALE: str = f'{args.locale}'
