@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "WoW_Commodities"
-description = ''
+description = 'Download World of Warcraft commodities auction data for the specified region.'
 readme = "README.md"
 requires-python = ">=3.10"
 license = "LGPL-3.0-or-later"
