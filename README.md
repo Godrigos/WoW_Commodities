@@ -27,6 +27,7 @@ Details on how to create those credentials can be found [here](https://develop.b
 - eu = Europe
 - kr = Korea
 - tw = Taiwan
+- cn = China
 
 Defaults to `us`.
 
@@ -35,6 +36,7 @@ And a localization paramenter for language translations. The supported localizat
 - EU Region: en_GB, es_ES, fr_FR, ru_RU, de_DE, pt_PT, it_IT
 - KR Region: ko_KR
 - TW Region: zh_TW.
+- CN Region: zh_CN
 
 Bear in mind that not all combinations of Regions and Localizations are valid. For more details on those combinations read [this article](https://develop.battle.net/documentation/guides/regionality-and-apis).
 
