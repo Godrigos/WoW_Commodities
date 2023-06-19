@@ -40,8 +40,11 @@ def main() -> None:
     if args.locale not in region_locale[args.region]:
         exit(f'Region {args.region} does not accept {args.locale} locale. '
              f'Please choose between {region_locale[args.region]}.')
-
-    URL: str = 'https://gateway.battlenet.com.cn/data/wow/' if args.region == 'cn' else f'https://{args.region}.api.blizzard.com/data/wow/'
+    
+    if args.region == 'cn':
+        URL = 'https://gateway.battlenet.com.cn/data/wow/'
+    else:
+        URL = f'https://{args.region}.api.blizzard.com/data/wow/'
     LOCALE: str = f'{args.locale}'
     TOKEN: str = get_token(args.id, args.secret, args.region)
 
