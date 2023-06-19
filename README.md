@@ -9,7 +9,7 @@
 ## Installation
 
 ```console
-pip install wow-commodities
+pip install WoW_Commodities
 ```
 
 ## Usage
