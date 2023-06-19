@@ -30,9 +30,9 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://github.com/Godrigos/wow-commodities#readme"
-Issues = "https://github.com/Godrigos/wow-commodities/issues"
-Source = "https://github.com/Godrigos/wow-commodities"
+Documentation = "https://github.com/Godrigos/WoW_Commodities#readme"
+Issues = "https://github.com/Godrigos/WoW_Commodities/issues"
+Source = "https://github.com/Godrigos/WoW_Commodities"
 
 [project.gui-scripts]
 wow-commodities = "app:main"
