@@ -105,7 +105,7 @@ commodities <- read_csv(
 commodities$`Unit Price` <- commodities$`Unit Price` / 10000 # gold
 ```
 
-You can even produce prety cool graphics with such data.
+You can even produce pretty cool graphics with such data.
 
 ![Graphic produced using R and ggplot.](https://i.imgur.com/LKAmPvb.jpg)
 
