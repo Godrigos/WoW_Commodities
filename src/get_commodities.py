@@ -2,6 +2,7 @@ import requests
 import time
 import os.path
 import json
+import sys
 
 def get_commodities(url, locale, token, file_path: str = ""):
     try:
@@ -17,7 +18,7 @@ def get_commodities(url, locale, token, file_path: str = ""):
                 data = json.loads(response.content)
                 return data
             else:
-                exit(f'Falha na solicitação!'
-                     f'\nErro HTTP {response.status_code}.')
+                sys.exit('Falha na solicitação!'
+                     f'Erro HTTP {response.status_code}.')
     except requests.exceptions.ConnectionError as e:
-        exit('Conexion failed.')
+        sys.exit('Conexion failed.')

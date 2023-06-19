@@ -1,5 +1,6 @@
 import requests
 import json
+import sys
 
 def get_token(id: str, secret: str, region: str) -> str:
     try:
@@ -15,5 +16,6 @@ def get_token(id: str, secret: str, region: str) -> str:
             data={'grant_type': 'client_credentials'},
             ).content
         )['access_token']
-    except requests.exceptions.ConnectionError as e:
-         exit(f'{e}.')
+    except:
+        sys.exit('Authentication failed. '
+              'Check your credentials, connection and try again.')

@@ -1,5 +1,6 @@
 import requests
 import json
+import sys
 
 def get_item_id(url, locale, token, item:str = '') -> int:
 
@@ -11,4 +12,4 @@ def get_item_id(url, locale, token, item:str = '') -> int:
             )
         return json.loads(res.content)['results'][0]['data']['id']
     except requests.exceptions.ConnectionError as e:
-        exit(f'{e}.')
+        sys.exit(f'{e}.')

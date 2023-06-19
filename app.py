@@ -1,6 +1,7 @@
 import pandas as pd
 import argparse
 import os
+import sys
 from src.get_commodities import get_commodities
 from src.get_token import get_token
 from src.region_locale import region_locale
@@ -38,7 +39,7 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.locale not in region_locale[args.region]:
-        exit(f'Region {args.region} does not accept {args.locale} locale. '
+        sys.exit(f'Region {args.region} does not accept {args.locale} locale. '
              f'Please choose between {region_locale[args.region]}.')
     
     if args.region == 'cn':
@@ -75,7 +76,7 @@ def main() -> None:
                 'Time Left': time_left}
             ).to_csv(args.path, index=False)
         except PermissionError:
-            exit('Cannot save file. Permission denied.')
+            sys.exit('Cannot save file. Permission denied.')
 
 if __name__ == "__main__":
     main()
