@@ -63,7 +63,7 @@ P.S.: Since chinese API uses a completely diferent set of links and the server s
 
 ## The Data
 
-The downloaded data consists of four columns:
+The downloaded data consists of five columns:
 
 - ID: a numeric identification of the auction.
 - Item: a numeric identification of the item.
