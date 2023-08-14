@@ -59,7 +59,7 @@ The downloaded data will be in a [LZMA](https://en.wikipedia.org/wiki/Lempel%E2%
 
 If needed you may uncompress it with [7-Zip](https://www.7-zip.org/download.html) and use the tools of preference to analyse it, but keep in mind that several tools can read it compressed (like [R](https://cran.r-project.org/)), without the need to unpack the file. Spreadsheet software might need the uncompressed file.
 
-P.S.: Since chinese API uses a completely diferent set of links and the server seems to have access limitations, I was unable to test it. So I can't confirm if it works with for the Chinese region.
+P.S.: Since chinese API uses a completely diferent set of links and the server seems to have access limitations, I was unable to test it. So I can't confirm if it works for the Chinese region.
 
 ## The Data
 
