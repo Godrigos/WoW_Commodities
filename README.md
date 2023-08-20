@@ -1,6 +1,7 @@
 # WoW Commodities
 
 [![PyPI - Version](https://img.shields.io/pypi/v/wow-commodities.svg)](https://pypi.org/project/wow-commodities)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/WoW_Commodities)
 
 -----
 
