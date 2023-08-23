@@ -18,7 +18,7 @@ def get_commodities(url, locale, token, file_path: str = ""):
                 data = json.loads(response.content)
                 return data
             else:
-                sys.exit('Falha na solicitação!'
+                sys.exit('Authentication failed!'
                      f'Erro HTTP {response.status_code}.')
     except requests.exceptions.ConnectionError as e:
         sys.exit('Conexion failed.')
