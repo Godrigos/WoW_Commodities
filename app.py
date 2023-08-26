@@ -14,7 +14,7 @@ def main() -> None:
         epilog=('This application comes with no warrant of any kind. '
         'Use at your own risk.')
     )
-    parser.add_argument('id', help=('Client ID from Blizzarp API Access.'),
+    parser.add_argument('id', help=('Client ID from Blizzard API Access.'),
                     type=str)
     parser.add_argument('secret', help=('Client Secret from Blizzard '
                                         'API Access.'),
