@@ -23,9 +23,8 @@ classifiers = [
   "Topic :: Games/Entertainment",
 ]
 dependencies = [
-  "pandas~=2.0",
-  "requests~=2.31",
-  "argparse~=1.4",
+  "pandas~=2.2",
+  "requests~=2.32"
 ]
 dynamic = ["version"]
 

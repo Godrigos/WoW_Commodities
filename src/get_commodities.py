@@ -11,14 +11,14 @@ def get_commodities(url, locale, token, file_path: str = ""):
             response = requests.get(
                 f'{url}'
                 f'auctions/commodities?namespace=dynamic-us'
-                f'&locale={locale}'
-                f'&access_token={token}'
+                f'&locale={locale}',
+                headers={"Authorization":f"Bearer {token}"}
             )
             if (response.status_code == 200):
                 data = json.loads(response.content)
                 return data
             else:
-                sys.exit('Authentication failed!'
+                sys.exit('Authentication failed! '
                      f'Erro HTTP {response.status_code}.')
     except requests.exceptions.ConnectionError as e:
         sys.exit('Conexion failed.')
