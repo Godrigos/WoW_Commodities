@@ -17,7 +17,7 @@ authors = [
   { name = "Aluizio, R.", email = "gambit01@bol.com.br" },
 ]
 classifiers = [
-  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
   "Operating System :: OS Independent",
   "Development Status :: 5 - Production/Stable",
   "Topic :: Games/Entertainment",
