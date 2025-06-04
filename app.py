@@ -56,13 +56,13 @@ def main() -> None:
         args.path += ".xz"
 
     with console.status(
-        "[bold]Downloading data...[/bold]", spinner="dots"
+        "[bold]Downloading data...[/bold]", spinner="dots2"
         ):
         data = get_commodities(URL, LOCALE, TOKEN, args.path)
     console.print("[bold green]Done![/bold green]")
 
     with console.status(
-        "[bold]Generating table...[/bold]", spinner="dots"
+        "[bold]Generating table...[/bold]", spinner="dots2"
         ):
         if data:
             id: list[int] = []
