@@ -2,6 +2,7 @@ import pandas as pd
 import argparse
 import os
 import sys
+from rich.progress import track
 from src.get_commodities import get_commodities
 from src.get_token import get_token
 from src.region_locale import region_locale
@@ -60,7 +61,8 @@ def main() -> None:
         quantity: list[int] = []
         unit_price: list[int] = []
         time_left: list[str] = []
-        for i in range(len(data['auctions'])):
+        for i in track(range(len(data['auctions'])),
+        description="Processing data..."):
             id.append(data['auctions'][i]['id'])
             item.append(data['auctions'][i]['item']['id'])
             quantity.append(data['auctions'][i]['quantity'])

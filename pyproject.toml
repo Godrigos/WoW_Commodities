@@ -24,7 +24,8 @@ classifiers = [
 ]
 dependencies = [
   "pandas~=2.2",
-  "requests~=2.32"
+  "requests~=2.32",
+  "rich~=14.0"
 ]
 dynamic = ["version"]
 
