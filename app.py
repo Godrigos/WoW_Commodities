@@ -1,4 +1,3 @@
-import pandas as pd
 import argparse
 import os
 import sys
@@ -6,6 +5,7 @@ from rich.console import Console
 from src.get_commodities import get_commodities
 from src.get_token import get_token
 from src.region_locale import region_locale
+from src.process_data import process_data
 
 console = Console()
 
@@ -65,28 +65,7 @@ def main() -> None:
         "[bold]Generating table...[/bold]", spinner="dots2"
         ):
         if data:
-            id: list[int] = []
-            item: list[int] = []
-            quantity: list[int] = []
-            unit_price: list[int] = []
-            time_left: list[str] = []
-            for i in range(len(data['auctions'])):
-                id.append(data['auctions'][i]['id'])
-                item.append(data['auctions'][i]['item']['id'])
-                quantity.append(data['auctions'][i]['quantity'])
-                unit_price.append(data['auctions'][i]['unit_price'])
-                time_left.append(data['auctions'][i]['time_left'])
-
-            try:
-                pd.DataFrame(
-                    {'ID': id,
-                    'Item': item,
-                    'Quantity': quantity,
-                    'Unit Price': unit_price,
-                    'Time Left': time_left}
-                ).to_csv(args.path, index=False)
-            except PermissionError:
-                sys.exit('Cannot save file. Permission denied.')
+            process_data(data, args.path)
     console.print("[bold green]Done![/bold green]")
 
 if __name__ == "__main__":
